@@ -8,12 +8,89 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Привет мир"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/header_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/text_header"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_text_ED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/input_text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/header_TV" />
+
+    <Button
+        android:id="@+id/convert_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/yellow"
+        android:onClick="onConvertButtonClick"
+        android:text="@string/convert"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_text_ED" />
+
+    <TextView
+        android:id="@+id/convert_result_text_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/result"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert_BTN" />
+
+    <TextView
+        android:id="@+id/convert_result_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/convert_result_text_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/convert_result_text_TV"
+        app:layout_constraintTop_toTopOf="@id/convert_result_text_TV"
+        app:layout_constraintVertical_bias="0"
+        tools:text="test" />
+
+    <TextView
+        android:id="@+id/count_symbols_text_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/count_symbols"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert_result_TV"
+        app:layout_goneMarginTop="16dp" />
+
+    <TextView
+        android:id="@+id/count_symbols_result_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        tools:text="123"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@id/count_symbols_text_TV"
+        app:layout_constraintTop_toTopOf="@id/count_symbols_text_TV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

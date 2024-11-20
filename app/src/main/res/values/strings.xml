@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FirstApp</string>
+    <string name="text_header">Все наоборот</string>
+    <string name="input_text">Введите текст</string>
+    <string name="convert">Преобразовать</string>
+    <string name="result">Результат</string>
+    <string name="count_symbols">Количество символов</string>
 </resources>
